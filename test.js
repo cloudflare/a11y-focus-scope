@@ -25,6 +25,20 @@ describe('focusScope', function() {
     element.remove();
   });
 
+  it('should focus the first focusable element if available', function() {
+    var element = buildElement('div', { tabindex: '-1' });
+    var button = buildElement('button');
+    element.appendChild(button);
+    document.body.appendChild(element);
+
+    focusScope.scopeFocus(element);
+
+    expect(document.activeElement).to.equal(button);
+
+    focusScope.unscopeFocus();
+    element.remove();
+  });
+
   it('should refocus when focus leaves the element', function() {
     var element = buildElement('div', { tabindex: '-1' });
     var button = buildElement('button');

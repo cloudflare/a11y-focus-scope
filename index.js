@@ -3,14 +3,21 @@
 // focusin polyfill for firefox
 require('focusin');
 
+var tabbable = require('tabbable');
+
 function init(element) {
+  function focus() {
+    (tabbable(element)[0] || element).focus()
+  }
+
   function onFocusIn(event) {
     if (element !== event.target && !element.contains(event.target)) {
-      element.focus();
+      focus();
     }
   }
 
-  element.focus();
+  focus();
+
   document.addEventListener('focusin', onFocusIn);
 
   return function teardown() {
