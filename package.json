@@ -1,0 +1,31 @@
+{
+  "name": "a11y-focus-scope",
+  "version": "0.0.0",
+  "description": "Accessibility util for scoping focus to an element.",
+  "main": "index.js",
+  "scripts": {
+    "test": "karma start"
+  },
+  "keywords": [
+    "a11y",
+    "accessibility",
+    "focus",
+    "focusin",
+    "store",
+    "restore",
+    "aria"
+  ],
+  "author": "James Kyle <me@thejameskyle.com>",
+  "license": "ISC",
+  "dependencies": {
+    "focusin": "^1.0.0"
+  },
+  "devDependencies": {
+    "chai": "^3.4.0",
+    "karma": "^0.13.15",
+    "karma-browserify": "^4.4.0",
+    "karma-mocha": "^0.2.0",
+    "karma-mocha-reporter": "^1.1.1",
+    "mocha": "^2.3.3"
+  }
+}
