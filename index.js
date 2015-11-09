@@ -1,11 +1,12 @@
 'use strict';
 
 var tabbable = require('tabbable');
+var focusin = require('focusin');
 
 function init(element) {
 
   // lazily polyfill focusin for firefox
-  require('focusin');
+  focusin.polyfill();
 
   function focus() {
     (tabbable(element)[0] || element).focus()
