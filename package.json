@@ -18,7 +18,7 @@
   "author": "James Kyle <me@thejameskyle.com>",
   "license": "ISC",
   "dependencies": {
-    "focusin": "^1.0.0",
+    "focusin": "^2.0.0",
     "tabbable": "^1.0.0"
   },
   "devDependencies": {
